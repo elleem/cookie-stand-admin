@@ -10,3 +10,4 @@ Version 1.0
 
 ### Initialize
 
+  npm run dev 
