@@ -6,6 +6,14 @@ Version 1.0
 
 ### Links and Resources
 
+### Feature Tasks and Requirements
+
+pages/index.js
+have
+header
+main, form
+footer
+
 ### Setup
 
 ### Initialize
