@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header"; 
 import Footer from "@/components/Footer";
-import Form from "../components/Form"; 
+import CreateForm from "../components/CreateForm"; 
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <title>Cookie Stand</title>
       </Head>
       <Header/>
-        <Form/>
+        <CreateForm/>
       <Footer/>
     
   </>

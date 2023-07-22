@@ -1,5 +1,5 @@
 import { useState } from "react"; 
-export default function Form(){
+export default function CreateForm(){
 
   const [cookieStandData,setCookieStandData] = useState([]); 
   const [lastCreatedCookieStand, setLastCreatedCookieStand] = useState(null)

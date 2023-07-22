@@ -23,7 +23,7 @@ Thank you to chatGPT for debugging assistance.
 -[] if reports is empty render `<h2> No Cookie Stands Available>`
 -[] if reports is not empty render a table with thead, tbody and tfoot components
 -[] update `<CreateForm>` per spec
--[] import slow data from data.js
+-[] import slot data from data.js
 -[] 
 
 ### Setup
