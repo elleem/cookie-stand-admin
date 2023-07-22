@@ -1,7 +1,11 @@
+import { useState } from "react";
 import CreateForm from "./CreateForm";
 import ReportTable from "./ReportTable";
+import { hourlySales } from "./data";
 
 export default function Main(){
+  const [stands,setStands] = useState([]); 
+
   function handleFormSubmit(event){
     event.preventDefault(); 
     const info ={
@@ -9,13 +13,16 @@ export default function Main(){
       minimum_customers_per_hour: event.target.minCustomers.value,
       maximum_customers_per_hour: event.target.maxCustomers.value,
       average_cookies_per_sale: event.target.avgCookiesPerSale.value,
+      hourlySales:hourlySales
     }
-    console.log(info)
+    setStands((prevStands) => [...prevStands, info]);
+    console.log(info);
   }
   
 return(
   <>
   <CreateForm formSubmitHandler={handleFormSubmit}/>
+  <ReportTable stands={stands}/>
   </>
 )
 }

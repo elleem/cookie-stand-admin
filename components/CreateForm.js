@@ -31,7 +31,6 @@ export default function CreateForm({formSubmitHandler}){
     </div>
     </div>
   </form>
-    <ReportTable/>
     </>
   )
 }
