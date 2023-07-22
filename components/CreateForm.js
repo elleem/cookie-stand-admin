@@ -1,28 +1,13 @@
-import { useState } from "react"; 
-export default function CreateForm(){
+import {hours} from './data.js';
+import ReportTable from "./ReportTable.js";
 
-  const [cookieStandData,setCookieStandData] = useState([]); 
-  const [lastCreatedCookieStand, setLastCreatedCookieStand] = useState(null)
 
-  const handleSubmit = (event) =>{
-    event.preventDefault();
-    const formData = new FormData(event.target); 
-    const newCookieStand = {
-      locationName: formData.get('locationName'),
-      minCustomers: formData.get('minCustomers'),
-      maxCustomers: formData.get('maxCustomers'),
-      avgCookiesPerSale: formData.get('avgCookiesPerSale'),
-    };
+export default function CreateForm({formSubmitHandler}){
 
-    setCookieStandData((prevData)=>[...prevData,newCookieStand]); 
 
-    setLastCreatedCookieStand(newCookieStand);
-    
-    event.target.reset(); 
-  }; 
   return(
     <>
-    <form className='w-3/4 p-2 mx-auto my-auto rounded-md border bg-green-300 mt-8' >
+    <form onSubmit={formSubmitHandler} className='w-3/4 p-2 mx-auto my-auto rounded-md border bg-green-300 mt-8' >
       <div className='flex items-center justify-center text-2xl pt-2 pb-4 font-semibold'>Create Cookie Stand</div>
     <div className="">
       <div className=" w-3/4 p-2 mx-4 flex items-center">
@@ -46,13 +31,7 @@ export default function CreateForm(){
     </div>
     </div>
   </form>
-    {/* Display the JSON string of the last created Cookie Stand */}
-    {lastCreatedCookieStand && (
-        <div className="flex items-center justify-center p-4 font-mono text-gray-700 bg-gray-100 mt-8">
-          {JSON.stringify(lastCreatedCookieStand, null, 2)}
-        </div>
-      )}
-    <p className="flex items-center justify-center pt-8 pb-16 font-semibold text-gray-700">Report Table Coming Soon...</p>
+    <ReportTable/>
     </>
   )
 }
