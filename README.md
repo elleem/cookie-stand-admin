@@ -2,7 +2,7 @@
 
 Author: Lauren Main
 
-Version 1.0
+Version 2.0
 
 ### Links and Resources
 
@@ -17,6 +17,14 @@ Thank you to chatGPT for debugging assistance.
 - [x] `<Footer>` component that matches the spec
 - [x] components are in their own functions
 - [x] components are in their own files
+
+-[x] componentize index.js
+-[] add `<ReportTable>` per spec
+-[] if reports is empty render `<h2> No Cookie Stands Available>`
+-[] if reports is not empty render a table with thead, tbody and tfoot components
+-[] update `<CreateForm>` per spec
+-[] import slow data from data.js
+-[] 
 
 ### Setup
 
