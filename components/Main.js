@@ -2,6 +2,8 @@ import { useState } from "react";
 import CreateForm from "./CreateForm";
 import ReportTable from "./ReportTable";
 import { hourlySales } from "./data";
+import Header from "./Header";
+import Footer from "./Footer"; 
 
 export default function Main(){
   const [stands,setStands] = useState([]); 
@@ -21,8 +23,10 @@ export default function Main(){
   
 return(
   <>
+  <Header/>
   <CreateForm formSubmitHandler={handleFormSubmit}/>
   <ReportTable stands={stands}/>
+  <Footer stands={stands}/>
   </>
 )
 }
