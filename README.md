@@ -18,13 +18,13 @@ Thank you to chatGPT for debugging assistance.
 - [x] components are in their own functions
 - [x] components are in their own files
 
--[x] componentize index.js
--[x] add `<ReportTable>` per spec
--[x] if reports is empty render `<h2> No Cookie Stands Available>`
--[x] if reports is not empty render a table with thead, tbody and tfoot components
--[x] update `<CreateForm>` per spec
--[x] import time slot data from data.js
--[x] update `<Footer>`
+- [x] componentize index.js
+- [x] add `<ReportTable>` per spec
+- [x] if reports is empty render `<h2> No Cookie Stands Available>`
+- [x] if reports is not empty render a table with thead, tbody and tfoot components
+- [x] update `<CreateForm>` per spec
+- [x] import time slot data from data.js
+- [x] update `<Footer>`
 
 ### Setup
 
