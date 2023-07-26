@@ -1,4 +1,4 @@
-import {hours, hourlySales} from './data'
+import {hours} from './data'
 
 export default function ReportTable({stands}){
   // console.log('Rendering ReportTable with stands:', stands);

@@ -1,8 +1,7 @@
 import { useState } from "react";
 import CreateForm from "./CreateForm";
-import ReportTable from "./ReportTable";
+import CookieStandTable from "./CookieStandTable";
 import { hourlySales } from "./data";
-import Header from "./Header";
 import Footer from "./Footer"; 
 
 export default function Main(){
@@ -23,9 +22,8 @@ export default function Main(){
   
 return(
   <>
-  <Header/>
   <CreateForm formSubmitHandler={handleFormSubmit}/>
-  <ReportTable stands={stands}/>
+  <CookieStandTable stands={stands}/>
   <Footer stands={stands}/>
   </>
 )

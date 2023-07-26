@@ -1,6 +1,3 @@
-import {hours} from './data.js';
-import ReportTable from "./ReportTable.js";
-
 
 export default function CreateForm({formSubmitHandler}){
 
