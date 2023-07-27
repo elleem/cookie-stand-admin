@@ -1,6 +1,6 @@
 import {hours} from './data'
 
-export default function ReportTable({stands}){
+export default function CookieStandTableTable({stands}){
   // console.log('Rendering ReportTable with stands:', stands);
   if(!stands || stands.length === 0){
     return <h2 className="text-center my-5 font-semibold text-2xl">No Cookie Stands Available</h2>;

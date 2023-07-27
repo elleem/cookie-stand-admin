@@ -4,7 +4,7 @@ import CookieStandTable from "./CookieStandTable";
 import { hourlySales } from "./data";
 import Footer from "./Footer"; 
 
-export default function Main(){
+export default function CookieStandAdmin(){
   const [stands,setStands] = useState([]); 
 
   function handleFormSubmit(event){
