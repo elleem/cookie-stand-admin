@@ -1,10 +1,25 @@
+import { useAuth } from "@/contexts/auth";
+import useResource from "@/hooks/useResource";
 
-export default function CreateForm({formSubmitHandler}){
+export default function CreateForm(){
+  const { user } = useAuth();
+  const { createResource } = useResource();
 
+  function localFormSubmitHandler(event) {
+    event.preventDefault();
+    const info = {
+      location: event.target.locationName.value,
+      minimum_customers_per_hour: parseInt(event.target.minCustomers.value),
+      maximum_customers_per_hour: parseInt(event.target.maxCustomers.value),
+      average_cookies_per_sale: parseFloat(event.target.avgCookiesPerSale.value),
+      owner: user.id
+    };
+    createResource(info);
+  }
 
   return(
     <>
-    <form onSubmit={formSubmitHandler} className='w-3/4 p-2 mx-auto my-auto rounded-md border border-green-500 bg-green-300 mt-8' >
+    <form onSubmit={localFormSubmitHandler} className='w-3/4 p-2 mx-auto my-auto rounded-md border border-green-500 bg-green-300 mt-8' >
     <div className="flex justify-evenly items-end my-1">
       <div className=" block w-3/4 p-2 mx-4">
       <label className='block mb-2 text-center font-bold'>ADD LOCATION</label>

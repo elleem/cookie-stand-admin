@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import useResource from "@/hooks/useResource";
 import { useAuth } from "@/contexts/auth";
 import LoginForm from '../components/LoginForm'
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const {user,login,logout} = useAuth()
@@ -20,6 +21,7 @@ export default function Home() {
         :
         <LoginForm onLogin ={login}/>
       }
+      <Footer locations={resources || []}/>
   </>
   )
 }
