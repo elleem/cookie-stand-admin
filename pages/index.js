@@ -1,13 +1,27 @@
 import Head from "next/head";
-import Main from "../components/Main"
+import CookieStandAdmin from "../components/CookieStandAdmin";
+import Header from '../components/Header';
+import useResource from "@/hooks/useResource";
+import { useAuth } from "@/contexts/auth";
+import LoginForm from '../components/LoginForm'
+import Footer from "@/components/Footer";
 
 export default function Home() {
+  const {user,login,logout} = useAuth()
+  const {resources} = useResource()
+
   return (
   <>
     <Head>
       <title>Cookie Stand</title>
       </Head>
-        <Main/>
+      <Header user ={user} logout={logout}/>
+      {user ?
+        <CookieStandAdmin/>
+        :
+        <LoginForm onLogin ={login}/>
+      }
+      <Footer locations={resources || []}/>
   </>
   )
 }
