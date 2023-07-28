@@ -37,7 +37,7 @@ Version 3.0 Feature Tasks
 - [x] if user logged in `<CookieStandAdmin>` renders
 - [x] `<LoginForm>` should receive a function passed in to call when form is submitted
 - [x] username/password should be arugments
-- [] when user fills out form to add location data posts to API
+- [x] when user fills out form to add location data posts to API
 - [x] `<CookieStandTable>` renders data immediately w/ no page refresh
 - [x] `<CookieStandTable>` adds delete icon, which deletes a cookie stand w/ no page refresh
 
