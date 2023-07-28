@@ -5,8 +5,14 @@ export default function CreateForm(){
   const { user } = useAuth();
   const { createResource } = useResource();
 
-  function localFormSubmitHandler(event) {
+  function formSubmitHandler(event) {
     event.preventDefault();
+    // console.log({
+    //   location: event.target.locationName.value,
+    //   minCustomers: event.target.minCustomers.value,
+    //   maxCustomers: event.target.maxCustomers.value,
+    //   avgCookiesPerSale: event.target.avgCookiesPerSale.value,
+    // });
     const info = {
       location: event.target.locationName.value,
       minimum_customers_per_hour: parseInt(event.target.minCustomers.value),
@@ -14,12 +20,13 @@ export default function CreateForm(){
       average_cookies_per_sale: parseFloat(event.target.avgCookiesPerSale.value),
       owner: user.id
     };
+    // console.log(info)
     createResource(info);
   }
 
   return(
     <>
-    <form onSubmit={localFormSubmitHandler} className='w-3/4 p-2 mx-auto my-auto rounded-md border border-green-500 bg-green-300 mt-8' >
+    <form onSubmit={formSubmitHandler} className='w-3/4 p-2 mx-auto my-auto rounded-md border border-green-600 bg-green-300 mt-8' >
     <div className="flex justify-evenly items-end my-1">
       <div className=" block w-3/4 p-2 mx-4">
       <label className='block mb-2 text-center font-bold'>ADD LOCATION</label>
@@ -37,7 +44,7 @@ export default function CreateForm(){
         <input name="maxCustomers" className='block w-full m-1 pl-1 font-bold ' id='maxCustomers'placeholder="0"/>
       </div>
       <div className='p-1 rounded-md'>
-        <label className='block p-1 text-center font-semibold'>AVERAGE COOKIES FOR SALE</label>
+        <label className='block p-1 text-center font-semibold'>AVERAGE COOKIES PER SALE</label>
         <input name="avgCookiesPerSale" className='block w-full m-1 pl-1 font-bold' id='avgCookiesPerSale'placeholder="0"/>
       </div>
     </div>

@@ -32,14 +32,14 @@ Version 2.0 Feature Tasks
 
 Version 3.0 Feature Tasks
 
-- [] pages/index.js exports `<Home>` component
-- [] if user not logged in `<LoginForm>` renders
-- [] if user logged in `<CookieStandAdmin>` renders
-- [] `<LoginForm>` should receive a function passed in to call when form is submitted
-- [] username/password should be arugments
+- [x] pages/index.js exports `<Home>` component
+- [x] if user not logged in `<LoginForm>` renders
+- [x] if user logged in `<CookieStandAdmin>` renders
+- [x] `<LoginForm>` should receive a function passed in to call when form is submitted
+- [x] username/password should be arugments
 - [] when user fills out form to add location data posts to API
-- [] `<CookieStandTable>` renders data immediately w/ no page refresh
-- [] `<CookieStandTable>` adds delete icon, which deletes a cookie stand w/ no page refresh
+- [x] `<CookieStandTable>` renders data immediately w/ no page refresh
+- [x] `<CookieStandTable>` adds delete icon, which deletes a cookie stand w/ no page refresh
 
 
 ### Setup
