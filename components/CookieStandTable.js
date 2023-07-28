@@ -11,8 +11,12 @@ export default function CookieStandTable({stands, deleteStand}){
   }
   
   let totalsByHour = new Array(hours.length).fill(0);
-
-  console.log(stands);
+  stands.forEach(stand => {
+    stand.hourly_sales.forEach((sale, index) => {
+      totalsByHour[index] += sale;
+    });
+  });
+  // console.log(stands);
 
   return(
     <table className="border border-green-600 w-3/4 mx-auto my-5">

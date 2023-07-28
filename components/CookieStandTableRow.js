@@ -1,13 +1,14 @@
 
 
 export default function CookieStandTableRow({stand, deleteStand}) {
-  // console.log (stand)
+  console.log (stand)
   function clickHandler(){
     deleteStand(stand.id); 
   }
   if (stand.hourly_sales.length == 0){
     stand.hourly_sales = new Array(hours.length).fill(0);
   }
+  // console.log(stand.hourly_sales)
   return (
     <tr className ='border border-green-600 even:bg-green-500 odd:bg-green-300'>
       <td className ='border border-green-600 flex justify-between'> {stand.location} <button onClick={clickHandler}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" className="w-6 h-6">
