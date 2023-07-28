@@ -8,16 +8,16 @@ export default function CreateForm(){
   function formSubmitHandler(event) {
     event.preventDefault();
     // console.log({
-    //   location: event.target.locationName.value,
-    //   minCustomers: event.target.minCustomers.value,
-    //   maxCustomers: event.target.maxCustomers.value,
-    //   avgCookiesPerSale: event.target.avgCookiesPerSale.value,
+    //   // location: event.target.locationName.value,
+    //   // minCustomers: event.target.minCustomers.value,
+    //   // maxCustomers: event.target.maxCustomers.value,
+    //   average_cookie_per_sale: event.target.average_cookie_per_sale.value,
     // });
     const info = {
       location: event.target.locationName.value,
       minimum_customers_per_hour: parseInt(event.target.minCustomers.value),
       maximum_customers_per_hour: parseInt(event.target.maxCustomers.value),
-      average_cookies_per_sale: parseFloat(event.target.avgCookiesPerSale.value),
+      average_cookie_per_sale: parseFloat(event.target.average_cookie_per_sale.value),
       owner: user.id
     };
     // console.log(info)
@@ -45,7 +45,7 @@ export default function CreateForm(){
       </div>
       <div className='p-1 rounded-md'>
         <label className='block p-1 text-center font-semibold'>AVERAGE COOKIES PER SALE</label>
-        <input name="avgCookiesPerSale" className='block w-full m-1 pl-1 font-bold' id='avgCookiesPerSale'placeholder="0"/>
+        <input name="average_cookie_per_sale" className='block w-full m-1 pl-1 font-bold' id='average_cookie_per_sale' defaultValue = '0'/>
       </div>
     </div>
   </form>

@@ -16,7 +16,7 @@ export default function CookieStandTable({stands, deleteStand}){
       totalsByHour[index] += sale;
     });
   });
-  console.log(stands);
+  // console.log(stands);
 
   return(
     <table className="border border-green-600 w-3/4 mx-auto my-5">
