@@ -36,8 +36,8 @@ export default function CookieStandTable({stands, deleteStand}){
           ))}
       </tbody>
       <tfoot>
-      <tr className='bg-green-500 border border-green-600 font-semibold'>
-        <td className='border border-green-600'>Totals</td>
+      <tr className='bg-green-500 border border-green-600 '>
+        <td className='border border-green-600 font-bold'>Totals</td>
         {totalsByHour.map((total, index) => (
           <td className='border border-green-600' key={index}>{total}</td>
         ))}
