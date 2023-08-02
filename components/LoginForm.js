@@ -8,7 +8,7 @@ export default function LoginForm({onLogin}){
     <div className="container flex w-3/4 flex-col items-center p-2 mx-auto my-3 rounded-md border border-emerald-500 bg-emerald-200">
     <form onSubmit={handleSubmit}>
     <fieldset autoComplete="off" className="items-center">
-    {/* <legend className="text-center text-2xl font-bold">Log In</legend> */}
+    <legend className="text-center text-md font-bold border-t-2 border-b-2 border-gray-500">LOG IN</legend>
 
       <label htmlFor="password" className="text-center block mb-2 text-sm font-bold text-gray-900">USER NAME</label>
       <input name="username" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="User Name"/>
