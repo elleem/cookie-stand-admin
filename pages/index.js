@@ -5,9 +5,10 @@ import useResource from "@/hooks/useResource";
 import { useAuth } from "@/contexts/auth";
 import LoginForm from '../components/LoginForm'
 import Footer from "@/components/Footer";
+import CreateNewUser from "@/components/CreateNewUser";
 
 export default function Home() {
-  const {user,login,logout} = useAuth()
+  const {user,login,logout, register} = useAuth()
   const {resources} = useResource()
 
   return (
@@ -19,9 +20,12 @@ export default function Home() {
       {user ?
         <CookieStandAdmin/>
         :
+        <>
         <LoginForm onLogin ={login}/>
+        <CreateNewUser onRegister = {register}/>
+        </>
       }
       <Footer locations={resources || []}/>
   </>
   )
-}
+};
