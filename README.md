@@ -44,6 +44,7 @@ Version 3.0 Feature Tasks
 Version 4.0 Feature Tasks
 
 -[x] if user not logged in `<CreateNewUser>` renders
+-[x] users cannot see other users' entries
 -[x] updates API end points to allow new user registration in project\urls.py
 -[x] updates models.py
 -[x] adds serializer in cooke_stands\views.py
