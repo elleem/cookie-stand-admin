@@ -2,7 +2,7 @@
 
 Author: Lauren Main
 
-Version 3.0
+Version 4.0
 
 ### Links and Resources
 
@@ -40,6 +40,15 @@ Version 3.0 Feature Tasks
 - [x] when user fills out form to add location data posts to API
 - [x] `<CookieStandTable>` renders data immediately w/ no page refresh
 - [x] `<CookieStandTable>` adds delete icon, which deletes a cookie stand w/ no page refresh
+
+Version 4.0 Feature Tasks
+
+-[x] if user not logged in `<CreateNewUser>` renders
+-[x] users cannot see other users' entries
+-[x] updates API end points to allow new user registration in project\urls.py
+-[x] updates models.py
+-[x] adds serializer in cooke_stands\views.py
+-[x] adds serializers.py in accounts
 
 
 ### Setup

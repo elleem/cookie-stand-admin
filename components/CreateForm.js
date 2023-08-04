@@ -45,7 +45,7 @@ export default function CreateForm(){
       </div>
       <div className='p-1 rounded-md'>
         <label className='block p-1 text-center font-semibold'>AVERAGE COOKIES PER SALE</label>
-        <input name="average_cookie_per_sale" className='block w-full m-1 pl-1 font-bold' id='average_cookie_per_sale' defaultValue = '0'/>
+        <input name="average_cookie_per_sale" className='block w-full m-1 pl-1 font-bold' id='average_cookie_per_sale' placeholder="0"/>
       </div>
     </div>
   </form>
