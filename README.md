@@ -50,7 +50,8 @@ Version 4.0 Feature Tasks
 - [x] adds serializer in cooke_stands\views.py
 - [x] adds serializers.py in accounts
 - [x] deploy to Vercel
-- [x] create a preview build
+- [x] create a [preview build](https://cookie-stand-admin-git-dev5-elleem.vercel.app/)
+- [x] update readme with link to [deployed app](https://cookie-stand-admin-elleem.vercel.app/)
 
 
 ### Setup
